@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '$1>=2')",
+      "Bash(perl -0pi -e ' *)",
+      "Bash(perl -i -pe ' *)",
+      "Bash(perl -0pi -e 's{\"  do, vi bpu_ctrl\\\\.v va :92 deu bi is_branch=0 chan lai -> khong flush,\\\\\\\\n\",}{\"  do, vi ca bpu_flush lan corr_valid deu bi is_branch=0 chan lai -> khong flush,\\\\\\\\n\",}' tb/tests/hyb_predict_tests.sv)",
+      "Bash(perl -0pi -e 's{//   \\\\\\(bpu_update_item\\\\.sv:29 c_offset_aligned, va update_drive_seq ep bit0=0\\\\\\),}{//   \\(rang buoc c_offset_aligned trong bpu_update_item.sv, va update_drive_seq ep bit0=0\\),}' tb/tests/hyb_btb_tests.sv)",
+      "Bash(perl -0pi -e 's{//   \\\\\\(bpu_reference\\\\.sv:97-106\\\\\\) nhung KHONG mo hinh trang thai \"dang bi giu}{//   \\(reset_handler trong bpu_reference.sv\\) nhung KHONG mo hinh trang thai \"dang bi giu}' tb/tests/hyb_rst_halt_tests.sv)",
+      "Bash(timeout 900 make -f Makefile.questa build)",
+      "Bash(timeout 900 make -f Makefile.questa run TESTNAME=carry_depth_and_merge_test)"
+    ]
+  }
+}
